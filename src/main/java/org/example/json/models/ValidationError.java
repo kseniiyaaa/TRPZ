@@ -10,14 +10,11 @@ public class ValidationError {
     @Id
     private Long id;
 
-    @Column(name = "schema_id")
-    private Long schemaId;
-
     private String errorMessage;
     private String propertyPath;
 
 
     @ManyToOne
-    @JoinColumn(name = "json_schema_id")
+    @JoinColumn(name = "schema_id")
     private JSONSchema jsonSchema;
 }
